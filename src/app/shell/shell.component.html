@@ -1,0 +1,35 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+  <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout p-l-20">
+    <StackLayout class="sideTitleStackLayout">
+      <Label text="Covid-19"></Label>
+    </StackLayout>
+    <ScrollView row="1">
+      <StackLayout class="sideStackLayout">
+        <Label
+          text="Coronavirus"
+          [nsRouterLink]="['/covid']"
+          class="sideLabel sideLightGrayLabel m-b-10"
+        ></Label>
+        <Label
+          text="Tips"
+          [nsRouterLink]="['/tips']"
+          class="sideLabel sideLightGrayLabel m-b-10"
+        ></Label>
+        <Label
+          text="About"
+          [nsRouterLink]="['/about']"
+          class="sideLabel sideLightGrayLabel m-b-10"
+        ></Label>
+        <Label
+          text="Logout"
+          (tap)="logout()"
+          class="sideLabel sideLightGrayLabel"
+        ></Label>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+  <StackLayout tkMainContent>
+    <!-- tempat halaman pokemon di-load -->
+    <page-router-outlet></page-router-outlet>
+  </StackLayout>
+</RadSideDrawer>

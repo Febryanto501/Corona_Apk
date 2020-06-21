@@ -1,0 +1,28 @@
+<ActionBar [title]="'Coronavirus by Country ( ' + country +' )'"></ActionBar>
+
+<GridLayout *ngIf="corona" rows="auto, auto, *" columns="*, *" class="p-10">
+  <Label class="h2" text="Information" row="0" colSpan="*"></Label>
+  <GridLayout
+    row="2"
+    col="0"
+    colSpan="2"
+    rows="auto, auto, auto, auto, auto, auto, auto"
+    columns="auto, *"
+  >
+  <Label text="Country Name   : " class="font-weight-bold" row="0" col="0"></Label>
+  <Label [text]="corona.country" class="text-uppercase" row="0" col="1"></Label>
+  <Label text="Cases                   : " class="font-weight-bold" row="1" col="0"></Label>
+  <Label [text]="corona.cases"  row="1" col="1"></Label>
+  <Label text="Cases(today)      : " class="font-weight-bold" row="2" col="0"></Label>
+  <Label [text]="corona.todayCases"  row="2" col="1"></Label>
+  <Label text="Deaths                  : " class="font-weight-bold" row="3" col="0"></Label>
+  <Label [text]="corona.deaths + ' (People)'"  row="3" col="1"></Label>
+  <Label text="Deaths(today)     : " class="font-weight-bold" row="4" col="0"></Label>
+  <Label [text]="corona.todayDeaths + ' (People)'"  row="4" col="1"></Label>
+  <Label text="Recovered            : " class="font-weight-bold" row="5" col="0"></Label>
+  <Label [text]="corona.recovered + ' (People)'"  row="5" col="1"></Label>
+  <Label text="Critical                   : " class="font-weight-bold" row="6" col="0"></Label>
+  <Label [text]="corona.critical + ' (People)'"  row="6" col="1"></Label>
+
+  </GridLayout>
+</GridLayout>
